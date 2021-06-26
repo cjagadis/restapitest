@@ -1,0 +1,18 @@
+put - update/replace
+patch - update / modify
+
+If record exist - update/replace
+If record does not exist - will create user
+All fields need to be sent even for a single field change
+
+{
+    "Name": "Jagadish",
+    "Phone": 6503451789,
+    "Address": "California"
+}
+
+In Patch, only the property that needs to be replaced/updates is specified
+
+{
+    "Address": "Oregon"
+}
