@@ -27,16 +27,17 @@ json_1 = '{"page":2,"per_page":6,"total":12,"total_pages":2,\
     "support":{"url":"https://reqres.in/#support-heading",\
     "text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}'
 
-print("json_1")
-print(json_1)
+# print("json_1")
+# print(json_1)
 
 code = r.status_code
 print(code)
+print("assert status 200")
 assert  code==200; "Code does not match"
 
 # show content - json format
-print("Json_2")
-print(r.json())
+# print("Json_2")
+# print(r.json())
 
 json_2 = r.text
 
@@ -44,4 +45,5 @@ json_2 = r.text
 json_dict1 = json.loads(json_1)
 json_dict2 = json.loads(json_2)
 
+print("Assert input Json and Get Json match")
 print(sorted(json_dict1.items()) == sorted(json_dict2.items()))
