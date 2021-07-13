@@ -1,7 +1,12 @@
 import requests
 import json
+import timeit
 
+start = timeit.timeit()
 r = requests.get('https://reqres.in/api/users?page=2')
+end = timeit.timeit()
+print('Get time')
+print(end - start)
 
 # print(r.status_code)
 # print(r)
